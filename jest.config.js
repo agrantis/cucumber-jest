@@ -1,4 +1,5 @@
-export default {
+/** @type {import('jest').Config} */
+const config = {
     coverageDirectory: 'coverage',
     coveragePathIgnorePatterns: ['/node_modules/', '/example/', '/test/'],
     coverageReporters: ['json-summary'],
@@ -21,5 +22,8 @@ export default {
         '^.+\\.(feature)$': '<rootDir>/dist/index.js'
     },
     testTimeout: 6000,
+    testEnvironment: 'jsdom',
     verbose: true
 };
+
+module.exports = config;

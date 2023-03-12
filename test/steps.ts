@@ -1,5 +1,4 @@
-import {Given, Then, When} from '@cucumber/cucumber';
-
+import {Given, Then, When} from '../dist/hooks';
 import type {TestWorld} from './world';
 
 Then('I say {word} and {string} and {string}', function (first, second, third) {

@@ -165,7 +165,8 @@ export const SignUp = () => {
                         color='primary'
                         className={classes.submit}
                         disabled={state.isSubmitting}
-                        onClick={onSubmit}>
+                        onClick={onSubmit}
+                    >
                         Sign Up
                     </Button>
                     <Button
@@ -175,7 +176,8 @@ export const SignUp = () => {
                         variant='contained'
                         color='primary'
                         className={classes.submit}
-                        onClick={onReset}>
+                        onClick={onReset}
+                    >
                         Reset
                     </Button>
                     <Grid container justify='flex-end'>
@@ -183,7 +185,8 @@ export const SignUp = () => {
                             <Grid item xs={12}>
                                 <Alert
                                     data-id='successAlert'
-                                    severity='success'>
+                                    severity='success'
+                                >
                                     Thanks for signing up!
                                 </Alert>
                             </Grid>
@@ -192,7 +195,8 @@ export const SignUp = () => {
                             <Grid item xs={12}>
                                 <Alert
                                     data-id='showExtraEmailsAlert'
-                                    severity='warning'>
+                                    severity='warning'
+                                >
                                     So, you're asking for more emails?!
                                 </Alert>
                             </Grid>

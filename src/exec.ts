@@ -16,9 +16,9 @@ try {
 }
 
 export function exec(
-    cwd: string,
+    cwd: string = '.',
     featurePath: string,
-    moduleFileExtensions: string[]
+    moduleFileExtensions: string[] = []
 ) {
     const act =
         typeof global['window'] === 'undefined' || !hasReactDom

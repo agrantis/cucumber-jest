@@ -11,10 +11,10 @@ if test -d "$BUILD_FOLDER"; then
 fi
 
 echo "building types"
-eval $(npm bin)/tsc --emitDeclarationOnly 2>&1 &
+yarn tsc --emitDeclarationOnly 2>&1 &
 
 echo "building src"
-eval NODE_ENV=production $(npm bin)/babel ${SRC_FOLDER} --out-dir ${BUILD_FOLDER} --extensions ${EXTENSIONS} --source-maps inline 2>&1 &
+NODE_ENV=production yarn babel ${SRC_FOLDER} --out-dir ${BUILD_FOLDER} --extensions ${EXTENSIONS} --source-maps inline 2>&1 &
 
 wait
 

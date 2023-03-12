@@ -1,5 +1,4 @@
-import {setWorldConstructor} from '@cucumber/cucumber';
-
+import {setWorldConstructor} from '../dist/hooks';
 import Element from './utils/element';
 import {$server, $spy} from './utils/mocks';
 

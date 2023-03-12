@@ -8,7 +8,7 @@ export type {Spec} from './parsers/suite';
 
 export default {
     canInstrument: false,
-    getCacheKey: (fileData, filename, configString, {instrument}) =>
+    getCacheKey: (fileData, filename, {configString}, instrument) =>
         crypto
             .createHash('md5')
             .update('\0', 'utf8')
