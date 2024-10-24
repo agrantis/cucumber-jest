@@ -5,6 +5,6 @@ declare const _default: {
     getCacheKey: (fileData: any, filename: any, { configString }: {
         configString: any;
     }, instrument: any) => string;
-    process(src: string, filePath: Config.Path, jestConfig: Config.ProjectConfig): string;
+    process(src: string, filePath: Config.Path, jestConfig: Config.ProjectConfig): import("@babel/core").BabelFileResult;
 };
 export default _default;

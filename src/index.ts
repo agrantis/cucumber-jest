@@ -39,6 +39,6 @@ export default {
             root: jestConfig.cwd
         });
 
-        return featureFile ? featureFile.code : src;
+        return featureFile ? featureFile : {code: src};
     }
 };
