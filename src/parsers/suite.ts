@@ -75,8 +75,11 @@ export function parseSuite(
 
     const hasExcludeTags = env.EXCLUDE_TAGS.length > 0;
     const hasTags = env.TAGS.length > 0;
-
-    const documentTags = map(document.tags, ({name}) => name);
+    console.log('got', document.tags);
+    const documentTags = map(
+        document.tags,
+        (tag) => tag.name || tag.id || 'unknown tag'
+    );
     const documentHasTags =
         documentTags.length > 0 && documentTags.some(matchesTags);
     const shouldSkipFeature = documentTags.includes('@skip');
